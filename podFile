@@ -1,0 +1,4 @@
+pod 'Parse'
+pod'SwiftyJSON'
+
+use_frameworks!
