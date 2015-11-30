@@ -15,23 +15,32 @@ class FormViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var nickNameField: UITextField!
     @IBOutlet weak var streetField: UITextField!
     @IBOutlet weak var bioTextView: UITextView!
-    
     @IBOutlet weak var cityPickerView: UIPickerView!
+    
     var cityArray:[String]?
     
     let networkInterface = NetworkInterface()
+    let setupStandard = SetupStandard()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //make a pickerview model with delegates and datasource 
         cityArray = [
             "Vancouver",
             "Surrey",
             "Abbotsford"
         ]
+        
+        setup()
     }
     
     //MARK: helper functions
+    
+    func setup() {
+//        setupStandard.underlineTextField(nickNameField)
+//        setupStandard.underlineTextField(streetField)
+    }
     
     //MARK: touch delegate
     
@@ -67,11 +76,10 @@ class FormViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         let cityIndex = cityPickerView.selectedRowInComponent(0)
         let city = cityArray![cityIndex]
         
-        networkInterface.getCoordinates(street, city: city) { (lng, lat) -> Void in
-            self.networkInterface.saveUserInfo(user!, nickName: nickName, street: street, city: city, bio: userBio, lng: lng, lat: lat)
-        }
+//        networkInterface.getCoordinates(street, city: city) { (lng, lat) -> Void in
+//            self.networkInterface.saveUserInfo(user!, nickName: nickName, street: street, city: city, bio: userBio, lng: lng, lat: lat)
+//        }
     
     }
-    
-
 }
+

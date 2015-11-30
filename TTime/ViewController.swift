@@ -15,16 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     let networkInterface = NetworkInterface()
-    
+    let setupStandard = SetupStandard()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
+        self.navigationController?.navigationBarHidden = false
+        self.navigationItem.title = "Create Account"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: helper functions 
+    
+    func setup() {
+        setupStandard.underlineTextField(usernameField)
+        setupStandard.underlineTextField(passwordField)
     }
     
     //MARK: IBActions 
@@ -37,12 +46,9 @@ class ViewController: UIViewController {
         networkInterface.signUpUser(username, passwordText: password) { () -> Void in
             //if this completion handler is called then the signup passed
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.performSegueWithIdentifier("FormViewController", sender: self)
+                self.performSegueWithIdentifier("SetupProfileViewController", sender: self)
             })
         }
     }
     
-
-
 }
-

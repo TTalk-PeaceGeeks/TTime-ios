@@ -15,6 +15,9 @@
 		1243A22C1C0A6099000FE431 /* podFile in Resources */ = {isa = PBXBuildFile; fileRef = 1243A22B1C0A6099000FE431 /* podFile */; };
 		1243A22E1C0A65A3000FE431 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1243A22D1C0A65A3000FE431 /* NetworkInterface.swift */; };
 		1243A2321C0A7105000FE431 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1243A2311C0A7105000FE431 /* FormViewController.swift */; };
+		127678891C0BA74E005F3194 /* SetupStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127678881C0BA74E005F3194 /* SetupStandard.swift */; };
+		1276788B1C0BB6F2005F3194 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276788A1C0BB6F2005F3194 /* SetupProfileViewController.swift */; };
+		1276788D1C0BC96C005F3194 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1276788C1C0BC96C005F3194 /* MapViewController.swift */; };
 		52A4B91E5B26EB1045B490B8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C3C52492CB6997A4353883 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		1243A22B1C0A6099000FE431 /* podFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podFile; sourceTree = "<group>"; };
 		1243A22D1C0A65A3000FE431 /* NetworkInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
 		1243A2311C0A7105000FE431 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		127678881C0BA74E005F3194 /* SetupStandard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupStandard.swift; sourceTree = "<group>"; };
+		1276788A1C0BB6F2005F3194 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		1276788C1C0BC96C005F3194 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		21692ECF18F686C49D5C00F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		54FD59DE4EFFD02CC4320860 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C3C52492CB6997A4353883 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				1243A22D1C0A65A3000FE431 /* NetworkInterface.swift */,
+				127678881C0BA74E005F3194 /* SetupStandard.swift */,
+				1243A2311C0A7105000FE431 /* FormViewController.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -91,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				1243A21B1C0A581D000FE431 /* ViewController.swift */,
-				1243A2311C0A7105000FE431 /* FormViewController.swift */,
+				1276788A1C0BB6F2005F3194 /* SetupProfileViewController.swift */,
+				1276788C1C0BC96C005F3194 /* MapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -236,10 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1276788B1C0BB6F2005F3194 /* SetupProfileViewController.swift in Sources */,
 				1243A21C1C0A581D000FE431 /* ViewController.swift in Sources */,
 				1243A22E1C0A65A3000FE431 /* NetworkInterface.swift in Sources */,
+				127678891C0BA74E005F3194 /* SetupStandard.swift in Sources */,
 				1243A2321C0A7105000FE431 /* FormViewController.swift in Sources */,
 				1243A21A1C0A581D000FE431 /* AppDelegate.swift in Sources */,
+				1276788D1C0BC96C005F3194 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ARJHack.TTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -364,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ARJHack.TTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";

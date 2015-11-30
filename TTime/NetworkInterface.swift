@@ -30,12 +30,13 @@ class NetworkInterface: NSObject {
         }
     }
     
-    func saveUserInfo(user:PFUser, nickName:String, street:String, city:String, bio:String, lng:Int, lat:Int) {
+    func saveUserInfo(user:PFUser, nickName:String, street:String, city:String, bio:String, gender:String, lng:Int, lat:Int) {
         
         user.setObject(nickName, forKey: "nickName")
         user.setObject(street, forKey: "street")
         user.setObject(city, forKey: "city")
         user.setObject(bio, forKey: "bio")
+        user.setObject(gender, forKey: "gender")
         
         user.setObject(lng, forKey: "lng")
         user.setObject(lat, forKey: "lat")
