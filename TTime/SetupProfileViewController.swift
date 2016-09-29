@@ -26,6 +26,8 @@ class SetupProfileViewController: UIViewController, UIPickerViewDataSource, UIPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //add uiimagepickerview for when the user taps on the profile imageView
         self.navigationController?.navigationBarHidden = false
         self.navigationItem.title = "Setup Profile"
         
